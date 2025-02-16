@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projets" class="projets">
+        <h2>Mes Projets</h2>
+        <div class="projet-grid">
+            <div class="projet-item">
+                <h3 class="highlight">Mise en place d'une infrastructure sécurisée virtualisée</h3>
+                <p class="fade-in"><u>Contexte</u>: Déploiement des services suivantes dans une infrastructure:
+                        <br> - Proxy (Squid) 
+                        <br> - Server web (Apache2) 
+                        <br> - DNS (Bind)
+                        <br> - Système de centralisation des logs (Rsyslog)
+                </p>
+                <p class="fade-in"><u>Tâches</u>: Identification des zones stratégiques pour la mise en place de chacun des services</p>
+                        <br> - Configuration des des machines virtuelles en suivant l'architecture données 
+                        <br> - Configuration des interfaces des machines virtuelles (choix du routage statique)
+                        <br> - Vérification de la connectivité puis installation et configuration des services
+                        <br> - Conception des règles de filtrages (iptables) pour autoriser ou interdire les trafics suivant le tableau de matrice des flux
+                        <br> - Rédaction d'un document de compte rendu expliquant en détail mon approche.
+                        </p>
+                        <a href="assets/doc/RapportLophiasDOSSA.pdf" download>Voir le compte rendu</a>
+            </div>
+            <div class="projet-item">
+                <h3 class="highlight">Mise en place d'un site web statique</h3>
+                <p class="fade-in"><u>Contexte</u>: Conception d'un portfolio en ligne pour dynamiser mon profil </p>
+                <p class="fade-in"><u>Technologies utilisés</u>: Utilisation de HTML, CSS et Javascript</p>
+                <p class="fade-in"><u>Tâches</u>: <br>Développement du site avec Visual Studio Code
+                    <br> Déploiement du site sur Github 
+                </p>
+                <a href="#">Voir le projet</a>
+                
+            </div>
+            <div class="projet-item">
+                <h3 class="highlight">Configuration d'une infrastructure réseau avec VLANs</h3>
+                <p class="fade-in"><u>Contexte</u>: L'entreprise CAVELAN souhaite segmenter son réseau en VLANs pour isoler logiquement les flux de ses trois services (Administratif, Développement, Commercial) 
+                <br>tout en conservant une flexibilité d’attribution des postes. L’infrastructure repose sur des switchs Cisco avec un plan d’adressage structuré et une configuration standardisée.</p>
+                <p class="fade-in"><u>Tâches</u>: <br> Configuration des VLANs pour chaque service
+                    <br> - Paramétrage des switchs selon les spécifications du projet
+                    <br> - Paramétrage des switchs selon les spécifications
+                    <br> - Brassage et connexion des postes aux ports configurés en fonction de leur appartenance à un service.
+                    <br> - Tests de connectivité et isolation des VLANs
+                    <br> - Documentation et validation de la configuration
+                       
+                </p>
+                <a href="#">Voir le projet</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
