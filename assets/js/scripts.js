@@ -39,9 +39,9 @@ window.addEventListener('scroll', () => {
 
         // Ajuste la transparence en fonction de la position de défilement
         if (scrollPosition > sectionTop - window.innerHeight / 2 && scrollPosition < sectionTop + sectionHeight) {
-            section.style.background = 'rgba(255, 255, 255, 0.9)'; // Moins transparent
+            section.style.background = 'rgba(255, 255, 255, 0.4)'; // Moins transparent
         } else {
-            section.style.background = 'rgba(255, 255, 255, 0.8)'; // Plus transparent
+            section.style.background = 'rgba(255, 255, 255, 0.3)'; // Plus transparent
         }
     });
 });
@@ -49,11 +49,11 @@ window.addEventListener('scroll', () => {
 // Fonction pour ajuster la transparence au survol
 document.querySelectorAll('header, .hero, .experiences, .projets, .apropos').forEach(section => {
     section.addEventListener('mouseenter', () => {
-        section.style.background = 'rgba(255, 255, 255, 0.95)'; // Presque opaque au survol
+        section.style.background = 'rgba(255, 255, 255, 0.4)'; // Presque opaque au survol
     });
 
     section.addEventListener('mouseleave', () => {
-        section.style.background = 'rgba(255, 255, 255, 0.8)'; // Retour à la transparence initiale
+        section.style.background = 'rgba(255, 255, 255, 0.3)'; // Retour à la transparence initiale
     });
 });
 
