@@ -241,13 +241,13 @@ nav ul li a:hover {
 }
 /* Section des projets */
 .projets {
-    padding: 2rem;
+    padding: 1rem;
     background: linear-gradient(135deg, #ece9e6, #ffffff);
     text-align: center;
 }
 
 .projets h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     color: #333;
     margin-bottom: 20px;
     opacity: 0;
@@ -258,11 +258,12 @@ nav ul li a:hover {
 /* Grille des projets */
 .projet-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 2rem;
+    grid-template-columns: 1fr; /* Une seule colonne */
+    gap: 20px; /* Réduire l'espacement entre les projets */
+    padding: 1rem; /* Réduire le padding de la grille */
+    max-width: 800px; /* Limiter la largeur de la grille */
+    margin: 0 auto; /* Centrer la grille */
 }
-
 /* Bloc de chaque projet */
 .projet-item {
     background: #fff;
@@ -275,12 +276,16 @@ nav ul li a:hover {
     animation: fadeInScale 1s ease-out forwards;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ajuste la hauteur en fonction du contenu */
+    justify-content: space-between;
+    overflow: hidden; /* Cache le contenu déroulant par défaut */
+    max-height: 100px; /* Hauteur initiale réduite pour ne montrer que le titre */
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
 }
 
+/* Au survol, dérouler le projet */
 .projet-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-height: 1000px; /* Hauteur maximale pour afficher tout le contenu */
+    padding-bottom: 25px; /* Ajuster le padding pour le contenu déroulé */
 }
 
 /* Titre du projet */
@@ -290,7 +295,9 @@ nav ul li a:hover {
     margin-bottom: 15px;
     position: relative;
     text-align: center;
+    cursor: pointer; /* Indique que le titre est interactif */
 }
+
 
 .projet-item h3::after {
     content: "";
@@ -314,16 +321,6 @@ nav ul li a:hover {
     text-align: justify; /* Justifier le texte */
 }
 
-/* Mots clés avec couleurs aléatoires
-.projet-item p u {
-    text-decoration: none;
-    font-weight: bold;
-    background: linear-gradient(90deg, #ff6f61, #6b5b95, #88b04b);Couleurs aléatoires
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: colorChange 5s infinite alternate;
-}*/
 
 @keyframes colorChange {
     0% {

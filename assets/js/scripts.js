@@ -128,10 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     draw();
 
+
     // Redimensionner le canvas si la fenêtre change de taille
     window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     });
+    
 });
 
